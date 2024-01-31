@@ -114,14 +114,11 @@ int main()
 	{
 		int opcao=8; //definindo variáveis
 		int laco=1;
-		char senhadigitada[5]="a";
+	
 	
 		printf("### Cartório da Ebac ###\n\n\n");
-		printf("Login de administrador!\n\n\nDigite a sua senha: ");
-		scanf("%s",senhadigitada);
-	
-		if(senhadigitada[5] =="admin")
-		{
+
+			{
 	
 		
 	
@@ -136,7 +133,8 @@ int main()
 			printf("Escolha a opção desejada do menu:\n\n\n");
 			printf("\t1 - registrar nomes\n");
 			printf("\t2 - Consultar nomes\n");
-			printf("\t3 - Deletar nomes\n\n\n"); 
+			printf("\t3 - Deletar nomes\n\n\n");
+			printf("\t4 - Sair do sistema\n\n\n");
 			printf("opção: "); //fim do menu
 		
 			scanf("%d" , &opcao); //armazenamento a escolha do usuário
@@ -161,13 +159,16 @@ int main()
 				deletar();
 				break;
 				
+				case 4:
+				printf("Obrigado por utilizar o sistema!\n\n");
+				return 0;
+				break;
+				
 				default:
 				printf("Essa opção nao esta disponivel!\n");
 				system("pause");		
 		
 				} //fim da seleção
 			}
-	}
-		else
-		printf("Senha incorreta ! !");	
+	}	
 }
